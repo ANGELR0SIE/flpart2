@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .filter-txt {
+            color: #000; /* Default color */
+            cursor: pointer;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent; /* Transparent border by default */
+            font-family: inter-semi-bold;
+        }
+
+        .filter-txt.active {
+            color: #2874f0;
+            cursor: default;
+            padding-bottom: 7px;
+            border-bottom: 2px solid #2874f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="filters">
+        <div class="filter-txt">Filter 1</div>
+        <div class="filter-txt">Filter 2</div>
+        <div class="filter-txt">Filter 3</div>
+    </div>
+    <script>
+        document.querySelectorAll('.filter-txt').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.filter-txt').forEach(el => {
+                    el.className = 'filter-txt'; 
+                });
+                this.className = 'filter-txt active';
+            });
+        });
+    </script>
+</body>
+</html>
