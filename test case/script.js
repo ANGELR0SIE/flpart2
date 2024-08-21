@@ -842,7 +842,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productElement.style.display =
         matchesRating && matchesBrand && matchesRAM ? "flex" : "none";
     });
-
+    toggleClearAllVisibility();
     // toggleClearAllVisibility();
     // toggleClearAllRatingsVisibility();
     // toggleClearAllRAMVisibility();
@@ -905,14 +905,15 @@ function clearAllFilters() {
   document.querySelectorAll('.filter').forEach(checkbox => {
       checkbox.checked = false;
   });
+  toggleClearAllVisibility();
+  leftfilterProducts();
 }
 
 // Functions to toggle visibility
 function toggleClearAllVisibility() {
-  const elements = document.querySelectorAll('.toggle-visibility');
-  elements.forEach(element => {
-      element.style.display = element.style.display === 'none' ? 'block' : 'none';
-  });
+  const checkboxes = document.querySelectorAll(".sec2-input:checked");
+    document.querySelector(".remove-items-sec2").style.display =
+      checkboxes.length > 0 ? "block" : "none";
 }
 
 function toggleClearAllRatingsVisibility() {
@@ -945,3 +946,59 @@ function toggleClearAllRAMVisibility() {
 
 eventListeners();
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

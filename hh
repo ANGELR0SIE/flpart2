@@ -94,3 +94,106 @@ let inactivityTimeoutId;
 
 const shiftKey=dcoument.querySelector(.'shiftkeys');
 shiftKeys
+
+
+
+
+
+
+
+
+
+// functon for flter  
+
+
+() {
+    [2, 4, 6].forEach((sectionNumber) => {
+      document
+        .querySelectorAll(`.sec${sectionNumber}-input:checked`)
+        .forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+      toggleClearAllVisibility(sectionNumber);
+    });
+
+    leftfilterProducts();
+  }
+
+
+
+
+
+
+/////////////////////////////////
+
+  function toggleClearAllVisibility(sectionNumber) {
+    const removeItemsElement = document.querySelector(
+      `.sec${sectionNumber}-remove-items`
+    );
+    const checkboxes = document.querySelectorAll(
+      `.sec${sectionNumber}-input:checked`
+    );
+
+    if (removeItemsElement) {
+      removeItemsElement.style.display =
+        checkboxes.length > 0 ? "block" : "none";
+    } else {
+      console.error(`Element '.sec${sectionNumber}-remove-items' not found.`);
+    }
+  }
+
+  function clearAllFilters() {
+    [2, 4, 6].forEach((sectionNumber) => {
+      document
+        .querySelectorAll(`.sec${sectionNumber}-input:checked`)
+        .forEach((checkbox) => {
+          checkbox.checked = false;
+        });
+      toggleClearAllVisibility(sectionNumber);
+    });
+
+    leftfilterProducts();
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
