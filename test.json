@@ -1,0 +1,63 @@
+{
+    "header": {
+      "logo": "Flipkart",
+      "searchPlaceholder": "Search for products, brands, and more",
+      "loginButton": "Login",
+      "wishlist": "Wishlist",
+      "cart": "Cart"
+    },
+    "filters": {
+      "categories": ["Mobiles", "Tablets", "Accessories"],
+      "priceRange": [
+        { "label": "Below ₹10,000", "value": 10000 },
+        { "label": "Below ₹50,000", "value": 50000 }
+      ],
+      "brands": ["Apple", "Samsung", "OnePlus", "Motorola", "Realme", "Poco"],
+      "customerRatings": [
+        { "label": "4★ & above", "value": 4 },
+        { "label": "3★ & above", "value": 3 }
+      ],
+      "ram": ["4 GB", "6 GB", "8 GB", "12 GB"],
+      "internalStorage": ["32 GB", "64 GB", "128 GB", "256 GB"],
+      "batteryCapacity": ["3000 mAh", "4000 mAh", "5000 mAh", "6000 mAh"]
+    },
+    "products": [
+      {
+        "id": 1,
+        "name": "iPhone 13",
+        "price": 62999,
+        "brand": "Apple",
+        "rating": 4,
+        "ram": "4 GB",
+        "storage": "128 GB",
+        "battery": "3000 mAh",
+        "image": "https://via.placeholder.com/100",
+        "offers": ["10% off on Axis Bank Cards", "EMI starting at ₹2,099/month"]
+      },
+      {
+        "id": 2,
+        "name": "Samsung Galaxy S21",
+        "price": 52999,
+        "brand": "Samsung",
+        "rating": 4,
+        "ram": "8 GB",
+        "storage": "128 GB",
+        "battery": "4000 mAh",
+        "image": "https://via.placeholder.com/100",
+        "offers": ["5% off on HDFC Bank Cards", "EMI starting at ₹1,999/month"]
+      },
+      {
+        "id": 3,
+        "name": "OnePlus 9",
+        "price": 49999,
+        "brand": "OnePlus",
+        "rating": 4,
+        "ram": "8 GB",
+        "storage": "128 GB",
+        "battery": "4500 mAh",
+        "image": "https://via.placeholder.com/100",
+        "offers": ["No Cost EMI", "Exchange offer available"]
+      }
+    ]
+  }
+  

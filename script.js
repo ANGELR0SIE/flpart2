@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector(".sec2-remove-items")
       .addEventListener("click", clearAllFilters);
-    document
-      .querySelector(".sec2-search-input")
-      .addEventListener("input", filterItems);
+    // document
+    //   .querySelector(".sec2-search-input")
+    //   .addEventListener("input", filterItems);
     document
       .querySelectorAll(".sec2-input")
       .forEach((checkbox) =>
@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .querySelector(".sec6-remove-items")
       .addEventListener("click", clearAllFilters);
 
-      
   }
 
   function filterProducts() {
@@ -107,15 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
     products.forEach((product) => container.appendChild(product));
   }
 
-  function filterItems() {
-    const filterInput = document
-      .querySelector(".sec2-search-input")
-      .value.toLowerCase();
-    document.querySelectorAll(".checkbox-li").forEach((item) => {
-      const itemName = item.querySelector("span").innerHTML.toLowerCase();
-      item.style.display = itemName.includes(filterInput) ? "block" : "none";
-    });
-  }
+  // function filterItems() {
+  //   const filterInput = document
+  //     .querySelector(".sec2-search-input")
+  //     .value.toLowerCase();
+  //   document.querySelectorAll(".checkbox-li").forEach((item) => {
+  //     const itemName = item.querySelector("span").innerHTML.toLowerCase();
+  //     item.style.display = itemName.includes(filterInput) ? "block" : "none";
+  //   });
+  // }
 
   function leftfilterProducts() {
     const selectedRatingIds = Array.from(
@@ -192,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleClearAllVisibility(6);
   }
 
-
 //   function clearAllFilters(sectionNumber) {
 //     console.log('Clearing filters for section:', sectionNumber);
 
@@ -230,7 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //     }
 // }
 
-
 function toggleClearAllVisibility(sectionNumber) {
   const removeItemsElement = document.querySelector(
     `.sec${sectionNumber}-remove-items`
@@ -260,19 +257,12 @@ function clearAllFilters() {
   leftfilterProducts();
 }
 
-
-
-
-
 function hideClearAllButton(sectionNumber) {
     const removeItemsElement = document.querySelector(`.sec${sectionNumber}-remove-items`);
     if (removeItemsElement) {
         removeItemsElement.style.display = "none";
     }
 }
-
-
-
 
   // selector for sortby filters---blue underline--
 
@@ -288,3 +278,6 @@ function hideClearAllButton(sectionNumber) {
 
   eventListeners();
 });
+
+
+

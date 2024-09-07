@@ -195,8 +195,6 @@ function createLeftSidebar() {
     leftSidebar.appendChild(section);
   });
 
-
-
   flipkart.left.section2.forEach((item) => {
     const section = document.createElement("section");
     section.className = "section sec2 wht-bg";
